@@ -17,9 +17,13 @@ class ProjectFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->sentence(3), // Tasodifiy 3 so'zdan iborat nom
+            'name' => $this->faker->sentence(2), // 2 so'zli tasodifiy nom
             'description' => $this->faker->paragraph(), // Tasodifiy tavsif
-            'link' => $this->faker->url, // Tasodifiy URL
+            'link' => $this->faker->url(), // Tasodifiy havola
+            'source_link' => $this->faker->url(), // Tasodifiy manba havolasi
+            'demo_link' => $this->faker->url(), // Tasodifiy demo havolasi
+            'created_at' => now(),
+            'updated_at' => now(),
         ];
     }
 }

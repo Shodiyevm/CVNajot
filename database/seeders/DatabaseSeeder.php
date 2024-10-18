@@ -15,11 +15,14 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(StudentSeeder::class);
         $this->call(ExperienceSeeder::class);
-        $this->call(LinkSeeder::class);
-        $this->call(HardSkillSeeder::class);
-        $this->call(LessonSeeder::class);
-        $this->call(ProjectSeeder::class);
-        $this->call(SoftSkillSeeder::class);
+        $this->call(EducationSeeder::class);
+        $this->call(ProjectSeeder::class);;
+        $this->call(SkillSeeder::class);
+        $this->call(SkillStudentSeeder::class);
+        $this->call(SocialNetworkSeeder::class);
+        $this->call(SocialNetworkStudentSeeder::class);
+        $this->call(LanguageSeeder::class);
+        $this->call(LanguageStudentSeeder::class);
 
         User::factory()->create([
             'name' => 'Test User',

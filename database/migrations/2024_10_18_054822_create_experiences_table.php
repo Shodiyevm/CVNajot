@@ -13,10 +13,12 @@ return new class extends Migration
     {
         Schema::create('experiences', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 32);
+            $table->unsignedBigInteger('student_id');
+            $table->string('name', 128);
+            $table->string('position', 128);
             $table->text('description')->nullable();
-            $table->timestamp('access_data')->nullable();
-            $table->timestamp('resignation_data')->nullable();
+            $table->timestamp('start_date');
+            $table->timestamp('end_date')->nullable();
             $table->timestamps();
         });
     }

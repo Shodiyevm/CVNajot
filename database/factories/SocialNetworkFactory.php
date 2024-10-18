@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Link>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\SocialNetwork>
  */
-class LinkFactory extends Factory
+class SocialNetworkFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,8 +17,8 @@ class LinkFactory extends Factory
     public function definition(): array
     {
         return [
-            'student_id' => Student::factory(),
-            'link' => $this->faker->url,
+                'name' => $this->faker->word(),
+                'link' => $this->faker->url(),
         ];
     }
 }

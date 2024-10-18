@@ -9,12 +9,12 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up()
     {
-        Schema::create('hard_skills', function (Blueprint $table) {
+        Schema::create('social_networks', function (Blueprint $table) {
             $table->id();
-            $table->integer('homework')->nullable();
-            $table->integer('participation')->nullable();
+            $table->string('name', 128);
+            $table->string('link', 256);
             $table->timestamps();
         });
     }
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('hard_skills');
+        Schema::dropIfExists('social_network');
     }
 };

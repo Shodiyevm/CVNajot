@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Experience>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Education>
  */
-class ExperienceFactory extends Factory
+class EducationFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -19,13 +19,11 @@ class ExperienceFactory extends Factory
         return [
             'student_id' => $this->faker->numberBetween(1, 10), // Tasodifiy student_id
             'name' => $this->faker->sentence(3), // 3 so'zli tasodifiy nom
-            'position' => $this->faker->jobTitle(), // Tasodifiy lavozim
             'description' => $this->faker->paragraph(), // Tasodifiy tavsif
-            'start_date' => $this->faker->dateTimeBetween('-2 years', 'now'), // 2 yil ichidagi sanalar
-            'end_date' => $this->faker->dateTimeBetween('now', '+2 years'), // Hozirdan 2 yil ichidagi sanalar
+            'start_date' => $this->faker->dateTimeBetween('-5 years', 'now'), // 5 yil ichidagi sanalar
+            'end_date' => $this->faker->dateTimeBetween('now', '+5 years'), // Hozirdan 5 yil ichidagi sanalar
             'created_at' => now(),
             'updated_at' => now(),
-
         ];
     }
 }
