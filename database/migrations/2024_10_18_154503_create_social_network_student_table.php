@@ -18,10 +18,11 @@ return new class extends Migration
 
             $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade');
             $table->foreign('social_network_id')->references('id')->on('social_networks')->onDelete('cascade');
-
+            $table->timestamps();
             $table->primary(['student_id', 'social_network_id']);
         });
     }
+
 
 
     /**

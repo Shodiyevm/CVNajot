@@ -5,16 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Education extends Model
+class SocialNetworkStudent extends Model
 {
     use HasFactory;
+    protected $table = 'social_network_student';
 
+    public $incrementing = false;
+    protected $keyType = 'string';
     protected $fillable = [
         'student_id',
-        'name',
-        'description',
-        'start_date',
-        'end_date',
+        'social_network_id',
+        'username',
+
     ];
 
 }

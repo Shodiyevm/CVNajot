@@ -14,10 +14,8 @@ return new class extends Migration
         Schema::create('language_student', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('language_id');
-
+            $table->unsignedBigInteger('student_id'); // student_id ustuni qo'shildi
             $table->timestamps();
-
-            // Foreign key
             $table->foreign('language_id')->references('id')->on('language')->onDelete('cascade');
             $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade');
         });
